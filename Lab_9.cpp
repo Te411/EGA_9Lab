@@ -8,7 +8,7 @@ using namespace std;
 
 const int N = 15;
 
-int roulet(vector<int> C) {
+int roulette(vector<int> C) {
 		random_device rd;
 		mt19937 gen(rd());
 		discrete_distribution<> distrib{C.begin(), C.end()};
@@ -48,7 +48,7 @@ void Algorithm7() {
 
 	for (int i = 0; i < N; i++) {
 		cout << "Шаг " << i + 1 << endl;
-		index = roulet(C);
+		index = roulette(C);
 		if (sumW + W[index] <= Wmax) {
 			cout << "Текущая цена ранца: " << Q << endl;
 			cout << "Текущий вес ранца: " << sumW << endl;
@@ -111,7 +111,7 @@ void Algorithm8() {
 
 	for (int i = 0; i < N; i++) {
 		cout << "Шаг " << i + 1 << endl;
-		index = roulet(Y);
+		index = roulette(Y);
 		if (sumW + W[index] < Wmax) {
 			cout << "Текущая цена ранца: " << Q << endl;
 			cout << "Текущий вес ранца: " << sumW << endl;
